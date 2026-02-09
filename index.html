@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>▓▒░ B S T ░▒▓</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar glass">
+    <div class="brand">█▓▒▒░░░BINARY SEARCH TREE░░░▒▒▓█</div>
+
+    <div class="control-group">
+        <input type="number" id="valueInput" placeholder="Value">
+        <button onclick="insertNode()" class="btn-primary">Insert</button>
+        <button onclick="deleteNode()" class="btn-danger">Delete</button>
+        <button onclick="searchNode()" class="btn-info">Search</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="control-group">
+        <button onclick="visualizeTraversal('preorder')">Pre-Order</button>
+        <button onclick="visualizeTraversal('inorder')">In-Order</button>
+        <button onclick="visualizeTraversal('postorder')">Post-Order</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <select id="operationSelect" onchange="handleOperation()">
+        <option value="">-- Analytics --</option>
+        <option value="min">Find Min</option>
+        <option value="max">Find Max</option>
+        <option value="height">Tree Height</option>
+        <option value="count">Node Count</option>
+        <option value="leaf">Leaf Count</option>
+        <option value="validate">Validate BST</option>
+    </select>
+
+    <div class="stats">Nodes: <b id="nodeCount">0</b></div>
+</div>
+
+<div class="output glass">
+    <h3 id="traversalTitle">Terminal Status</h3>
+    <p id="traversalResult">System Ready. Awaiting input...</p>
+</div>
+
+<div id="tree-container">
+    <svg id="lines"></svg>
+    <div id="tree"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
